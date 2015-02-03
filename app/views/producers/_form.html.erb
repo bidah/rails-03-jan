@@ -1,15 +1,39 @@
-<%= form_for(@producer) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %> <br />
-  <%= f.label :bug %>
-  <%= f.text_field :bug %> <br />
-  <%= f.label :internals %>
-  <%= f.text_field :internals %> <br />
-  <%= f.label :exceptions %>
-  <%= f.text_field :exceptions %> <br />
-  <%= f.label :components %>
-  <%= f.text_field :components %> <br />
-  <%= f.label :gives %>
-  <%= f.text_field :gives %> <br />
-  <%= f.submit %>
-<% end %>
+
+    <%= form_for(@producer, class: 'form-horizontal') do |f| %>
+    <div class="form-group">
+      <%= f.label :name, class: 'col-md-2' %>
+      <div class="col-md-10">
+        <%= f.text_field :name %> <br />
+      </div>
+    </div>
+      <div class="form-group">
+      <%= f.label :bug, class: 'col-md-2' %>
+      <div class="col-md-10">
+      <%= f.text_field :bug %> <br />
+      </div>
+    </div>
+      <div class="form-group">
+      <%= f.label :internals, class: 'col-md-2' %>
+      <div class="col-md-10">
+      <%= f.text_field :internals %> <br />
+      </div>
+    </div>
+      <div class="form-group">
+      <%= f.label :exceptions, class: 'col-md-2' %>
+      <div class="col-md-10">
+      <%= f.text_field :exceptions %> <br />
+      </div>
+    </div>
+      <div class="form-group">
+      <%= f.label :components, class: 'col-md-2' %>
+      <div class="col-md-10">
+      <%= f.text_field :components %> <br />
+      </div>
+    </div>
+      <div class="form-group">
+      <%= f.label :gives, class: 'col-md-2' %>
+      <div class="col-md-10">
+      <%= f.text_field :gives %> <br />
+                    <%= f.submit %>
+      </div>    </div>
+    <% end %>
