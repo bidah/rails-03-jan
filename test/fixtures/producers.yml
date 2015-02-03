@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bug: MyString
+  internals: MyString
+  exceptions: MyString
+  components: MyString
+  gives: MyString
+
+two:
+  name: MyString
+  bug: MyString
+  internals: MyString
+  exceptions: MyString
+  components: MyString
+  gives: MyString
