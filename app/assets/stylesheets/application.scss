@@ -18,3 +18,10 @@
  .row-top {
   padding-top: 14px;
  }
+
+
+
+.field_with_errors input[type="text"] {
+  padding: 3px 2px;
+  border: 2px solid #a94442;
+}

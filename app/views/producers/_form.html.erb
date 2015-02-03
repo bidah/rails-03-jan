@@ -1,4 +1,10 @@
-
+    <% if @producer.errors.any? %>
+      <div class="alert alert-danger">
+              You have this errors in your form: 
+      <%= @producer.errors.full_messages.join(', ')  %>
+      </div>
+    <% end %>
+    
     <%= form_for(@producer, class: 'form-horizontal') do |f| %>
     <div class="form-group">
       <%= f.label :name, class: 'col-md-2' %>

@@ -8,8 +8,12 @@ class ProducersController < ApplicationController
   end
 
   def create
-    @producer = Producer.create(producer_params)
-    redirect_to producer_path(@producer)
+    @producer = Producer.new(producer_params)
+    if @producer.save
+      redirect_to producer_path(@producer)
+    else
+      render :new
+    end
   end
 
   def show
@@ -22,8 +26,12 @@ class ProducersController < ApplicationController
 
   def update
     @producer = Producer.find(params[:id])
-    @producer.update(producer_params)
-    redirect_to producer_path(@producer)
+      
+    if @producer.update(producer_params)
+      redirect_to producer_path(@producer)
+    else
+      render :edit
+    end
   end
 
   def destroy
