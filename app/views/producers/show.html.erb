@@ -1,25 +1,26 @@
 
-<h1><%= @producer.name %> </h1>
-<strong>bug: </strong><%= @producer.bug %> <br />
-<strong>internals: </strong><%= @producer.internals %> <br />
-<strong>exceptions: </strong><%= @producer.exceptions %> <br />
-<strong>components: </strong><%= @producer.components %> <br />
-<strong>gives: </strong><%= @producer.gives %>
-
-
 <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading"><%= @producer.name %></div>
+  <div class="panel-heading"><h4><%= @producer.name.upcase %></h4></div>
   <div class="panel-body">
-    <p>...</p>
+    <p>missing description</p>
   </div>
-
   <!-- List group -->
   <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">
+      <strong>bug: </strong><%= @producer.bug %> <br />
+    </li>
+    <li class="list-group-item">
+      <strong>internals: </strong><%= @producer.internals %> <br />
+    </li>
+    <li class="list-group-item">
+      <strong>exceptions: </strong><%= @producer.exceptions %> <br />
+    </li>
+    <li class="list-group-item">
+      <strong>components: </strong><%= @producer.components %> <br />
+    </li>
+    <li class="list-group-item">
+      <strong>gives: </strong><%= @producer.gives %>
+    </li>
   </ul>
 </div>

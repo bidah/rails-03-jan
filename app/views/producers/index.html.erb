@@ -1,5 +1,10 @@
-<ul class="list-group">
-<% @producers.each do |producer| %>
-  <%= link_to producer.name, producer_path(producer), class: ' list-group-item' %>
-<% end %>
-</ul>
+<!-- <div class="panel panel-default"> -->
+  <!-- Default panel contents -->
+  <!-- <div class="panel-heading"><h4 style="text-transform: uppercase">Producer idea list</h4></div> -->
+  <h3 style="text-transform:uppercase">type of producers</h3>
+  <ul class="list-group">
+  <% @producers.each do |producer| %>
+    <%= link_to producer.name, producer_path(producer), class: ' list-group-item' %>
+  <% end %>
+  </ul>
+<!-- </div> -->
