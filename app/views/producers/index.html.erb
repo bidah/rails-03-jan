@@ -1,3 +1,5 @@
+<ul class="list-group">
 <% @producers.each do |producer| %>
-  <%= link_to producer.name, producer_path(producer) %></br>
+  <%= link_to producer.name, producer_path(producer), class: ' list-group-item' %>
 <% end %>
+</ul>
