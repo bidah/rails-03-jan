@@ -8,19 +8,27 @@
 </head>
 <body>
 
-<div>
-<% if params[:action] == "index" %>
-  <%= link_to "new producer".upcase, new_producer_path %>
-<% elsif params[:action] == "new" %>
-  <%= link_to "home".upcase, producers_path %>
-<% else %>
-  <%= link_to "new producer".upcase, new_producer_path %>
-  <%= link_to "home".upcase, producers_path %>
-<% end %>
-</br></br>
+<div class="container">
+  <div class="row row-top">
+    <div class="col-md-12">
+      <% if params[:action] == "index" %>
+        <%= link_to "new producer".upcase, new_producer_path, class: "btn btn-default" %>
+      <% elsif params[:action] == "new" %>
+        <%= link_to "home".upcase, producers_path, class: "btn btn-default" %>
+      <% elsif params[:action] == "show" %>
+        <%= link_to "home".upcase, producers_path, class: "btn btn-default" %>
+        <%= link_to "new producer".upcase, new_producer_path, class: "btn btn-default" %>
+        <%= link_to "edit producer".upcase , edit_producer_path(@producer), class: "btn btn-default" %>
+      <% else %>
+        <%= link_to "home".upcase, producers_path, class: "btn btn-default" %>
+        <%= link_to "new producer".upcase, new_producer_path, class: "btn btn-default" %>
+      <% end %>
+      </br></br>
+      <%= yield %>
+    </div>
+  </div>
 </div>
 
-<%= yield %>
 
 </body>
 </html>
