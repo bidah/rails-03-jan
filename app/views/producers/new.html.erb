@@ -1,19 +1,2 @@
-<h1>Producers#new</h1>
-<p>Find me in app/views/producers/new.html.erb</p>
 
-
-<%= form_for(@producer) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %> <br />
-  <%= f.label :bug %>
-  <%= f.text_field :bug %> <br />
-  <%= f.label :internals %>
-  <%= f.text_field :internals %> <br />
-  <%= f.label :exceptions %>
-  <%= f.text_field :exceptions %> <br />
-  <%= f.label :components %>
-  <%= f.text_field :components %> <br />
-  <%= f.label :gives %>
-  <%= f.text_field :gives %> <br />
-  <%= f.submit %>
-<% end %>
+<%= render 'form' %>

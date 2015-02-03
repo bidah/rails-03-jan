@@ -1,5 +1,6 @@
 class ProducersController < ApplicationController
   def index
+    @producers = Producer.all
   end
 
   def new
@@ -16,9 +17,13 @@ class ProducersController < ApplicationController
   end
 
   def edit
+    @producer = Producer.find(params[:id])
   end
 
   def update
+    @producer = Producer.find(params[:id])
+    @producer.update(producer_params)
+    redirect_to producer_path(@producer)
   end
 
   def destroy

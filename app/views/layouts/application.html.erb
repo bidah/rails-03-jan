@@ -8,6 +8,18 @@
 </head>
 <body>
 
+<div>
+<% if params[:action] == "index" %>
+  <%= link_to "new producer".upcase, new_producer_path %>
+<% elsif params[:action] == "new" %>
+  <%= link_to "home".upcase, producers_path %>
+<% else %>
+  <%= link_to "new producer".upcase, new_producer_path %>
+  <%= link_to "home".upcase, producers_path %>
+<% end %>
+</br></br>
+</div>
+
 <%= yield %>
 
 </body>

@@ -1,2 +1,3 @@
-<h1>Producers#index</h1>
-<p>Find me in app/views/producers/index.html.erb</p>
+<% @producers.each do |producer| %>
+  <%= link_to producer.name, producer_path(producer) %></br>
+<% end %>
